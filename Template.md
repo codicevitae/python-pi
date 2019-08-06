@@ -1,11 +1,13 @@
 
 Date: _________
 
-Lesson: Week ___ Lesson ___ : <Title>
+Lesson: (Title)
 
+####Guidelines
+These are here to mainly guide/direct the lesson. Feel free to add/subtract as needed. 
 
 Topic | Description (with time estimates)
---- | ---
+----- | -----
 Goals | (The expected understanding/knowledge gained from the class)
 Objectives | (How the understanding of the lesson is demonstrated)
  Anticipatory Set | (Introduction talk/topic to get the class laughing, talking, and generally engaging with the class)
