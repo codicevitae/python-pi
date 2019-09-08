@@ -3,17 +3,17 @@ Date: 12/3/2019 (Tuesday)
 
 Lesson: Computers and programs
 
-####Goals 
+#### Goals 
 * To understand the roles of hardware and software in computer systems.
 * To understand the basic design of a modern computer.
 * To understand how to run a python script. 
 * To learn the purpose of a programming language.
 
-####Definitions
+#### Definitions
 * Computer: **A machine that can carry out a sequence of operations as specified in a computer program.**
 * Computer program: **A detailed set of instructions telling a computer exactly what to do.**
 
-####Hardware
+#### Hardware
 * Have you ever used a computer before (raise of hands)? 
 * What is a computer? What is required for something to be considered a computer? 
     - microwave
@@ -36,7 +36,7 @@ Lesson: Computers and programs
     * Open and examine your rasberry pi. 
     * Label each part. Check your answers against the board.
 
-####Software Programs
+#### Software Programs
 * Computer software (programs): "And the borrower is servant to the lender" (Prov 22:7), additionally, the hardware is servant to the software. 
 * The way to get the hardware to perform actions is via software, and specifically software programming. 
 * Software is written in one or more programming languages. 
@@ -57,7 +57,7 @@ Lesson: Computers and programs
         * python -c "print( 'Hello world' )"
         * What is displayed in response?
 
-####Terminal / Command line
+#### Terminal / Command line
 * One tool that will be used to run, execute, and utilize the computer will be the terminal (aka command line).
 * Some commands to get around:
     * **ls** - prints all files/folders in the current directory
