@@ -14,12 +14,15 @@ Lesson: Computers and programs
 * Computer program: **A detailed set of instructions telling a computer exactly what to do.**
 
 #### Hardware
-* Have you ever used a computer before (raise of hands)? 
+* Have you ever looked inside a computer before (raise of hands)? 
 * What is a computer? What is required for something to be considered a computer? 
     - microwave
     - doorbell
     - vending machine
     - lamp
+* How is a computer different from a device such as a clock or flashlight?
+* When was the first **programmable** computer conceived of?
+
 * Who knows what this is? 
 ![Pi](https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Raspberry_Pi_3_B%2B_%2839906369025%29.png/1200px-Raspberry_Pi_3_B%2B_%2839906369025%29.png)
 * It isn't required to know all the details about a computer to be a computer scientist, but it helps (as knowing a few things about a car helps any driver).
@@ -72,3 +75,19 @@ Lesson: Computers and programs
 * Since this is linux, file paths are deliminated with the / character, instead of the \ character.
 * Demo / Lab
     * Create a directory structure/tree with the following layout:
+```
+    +---Middle-Earth
+    |       Hobbit
+    |       Fellowship-of-the-Rings
+    |       The-Two-Towers
+    |       Return-of-the-King
+    |
+    \---Narnia
+            The-Lion-the-Witch-and-the-Wardrobe
+            Prince-Caspian
+            The-Voyage-of-the-Dawn-Treader
+            The-Silver-Chair
+            The-Horse-and-His-Boy
+            The-Magicians-Nephew
+            The-Last-Battle
+```
