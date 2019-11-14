@@ -107,7 +107,22 @@ Date: 1/9/20 (Thursday)
   * There are usually better ways, though!
 
 #### Nested Logical Statements
-* Nested IF statements (cyclical complexity?)
+* Nested IF statements
+* Indentation is key
 
+#### Stretch Goals Based on Time
+* Simplifying Logical statements
+  * Can spend weeks talking about how to simplify logic
+  * Use short-circuiting to your benefit
+  * Try to avoid overly complex statements that are:
+    1. Hard to understand
+    2. Prone to typos
+    3. Hard to test and find problems
+* Think about how to test your code as you write it
+  * For every level of nesting, you have more test cases to try to make sure things work
+  * The more you simplify the logic of your program, the easier it is to test
+  * Cyclical complexity is a term that describes the number of possible paths through your code
+  * Greater cyclical complexity leads to bugs that are harder to find and code that is harder to read
+  
 #### Lab Exercises
 TBD
