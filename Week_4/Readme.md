@@ -1,7 +1,7 @@
-
+## Day 1
 Date: 1/7/2020 (Tuesday)
 
-Lesson: Conditional Execution
+## Lesson: Conditional Execution
 
 #### Goals:
 * To understand what an algorithm is
@@ -49,18 +49,14 @@ Lesson: Conditional Execution
 * `7 < 8` is always true, but `x < y` I have no idea about until the program actually runs
 
 #### If statements
-* `If there are two slices of bread...`
-* `If there is no strawberry jelly, then eat something else`
 * Simple IF - Checks for a condition and executes or does not 
-* IF-ELSE - Checks for a condition and goes one of two ways (branching)
-* IF-ELIF-ELSE - Checks for multiple conditions in order and executes one (and only one) option
-* IF-ELIF-ELIF-ELIF-ELIF-ELIF-ELSE - Can get as complex as you need it to (though there are usually better ways...)
-* Nested IF statements (cyclical complexity?)
+  * `If there are two slices of bread...`
+  * `If there is no strawberry jelly, then eat something else`
 * Short-circuiting is a mechanism whereby the computer stops as soon as it can determine the final true/falise state
-  * if 7 > 8 && 1 < 2
-  * if 7 < 8 || 1 < 2
-  * if x == y && u > v
-  * if x == y || u == v
+  * `if 7 > 8 && 1 < 2`
+  * `if 7 < 8 || 1 < 2`
+  * `if x == y && u > v`
+  * `if x == y || u == v`
 
 #### Python particulars
 * colon
@@ -70,4 +66,48 @@ Lesson: Conditional Execution
 #### Lab Exercises
 * TBD
 
+## Day 2 - 
+Date: 1/9/20 (Thursday)
 
+## Lesson: Branching
+
+#### Goals:
+* To understand more complex conditional statments (if-else and if-elif-else)
+* To understand how to nest conditional statements 
+* To understand Python's syntax and indentation requirements
+
+#### IF/ELSE
+* What if an IF statement is not enough?
+* What if I need to take different actions based on the true/false result of a statement?
+  * I can say:
+    ```
+    if x == y:
+      print('yep')
+    if x != y:
+      print('nope')
+    ```
+  * But I always want one and only one of those to happen, why check twice?  
+* IF/ELSE Checks for a condition and goes one of two ways (branching)
+  * Now I can say:
+    ```
+      if x == y:
+        print('yep')
+      else:
+        print('nope')
+    ```
+  * Less chance for error
+  * Easier to understand what I mean
+  * No chance both statements will ever be executed!
+  
+#### IF/ELIF/ELSE
+* What if two options is not enough?
+* IF/ELIF/ELSE Checks for multiple conditions in order and executes one (and only one) option
+* IF/ELIF/ELIF/ELIF/ELIF/ELIF/ELSE
+  * Can get as complex as you need it to
+  * There are usually better ways, though!
+
+#### Nested Logical Statements
+* Nested IF statements (cyclical complexity?)
+
+#### Lab Exercises
+TBD
