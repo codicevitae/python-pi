@@ -32,7 +32,7 @@ Date: 1/7/2020 (Tuesday)
 
 #### Logical Operators
 * Have already covered Boolean type (TRUE/FALSE)
-* `<, >, ==, !, etc`
+* `<, >, ==, !=, >=, <=`
 * `and, or, not`
 * These allow us to produce boolean values based on the comparison of logical statements
   * `x = 7 < 8` (x = true)
