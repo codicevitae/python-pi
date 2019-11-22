@@ -50,7 +50,7 @@ Date: 1/7/2020 (Tuesday)
 
 #### If statements
 * Simple IF - Checks for a condition and executes or does not 
-  * `If there are two slices of bread...`
+  * `If there are two slices of bread, make a sandwich`
   * `If there is no strawberry jelly, then eat something else`
 * Short-circuiting is a mechanism whereby the computer stops as soon as it can determine the final true/falise state
   * `if 7 > 8 and 1 < 2`
