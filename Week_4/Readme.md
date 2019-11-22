@@ -33,18 +33,18 @@ Date: 1/7/2020 (Tuesday)
 #### Logical Operators
 * Have already covered Boolean type (TRUE/FALSE)
 * `<, >, ==, !, etc`
-* `||, &&, ()`
+* `and, or, not`
 * These allow us to produce boolean values based on the comparison of logical statements
   * `x = 7 < 8` (x = true)
   * `a = 7 >= 8` (a = false)
   * `b = 1 != 2` (b = true)
   * `isEqual = x == y` (true or false depending on what is in `x` and `y`)
 * Logical statements can be combined or chained
-  * `x = 7 > 8 || 1 < 3` 
-  * `a = x == y && u == v`
+  * `x = 7 > 8 or 1 < 3` 
+  * `a = x == y and u == v`
 * Logical statements can be grouped
-  * `x = (7 < 8 || 1 < 3) && 5 < 4`
-  * `a = (x == y && u == v) || true`
+  * `x = (7 < 8 or 1 < 3) and 5 < 4`
+  * `a = (x == y and u == v) or true`
 * Logic in our algorithms comes from using these logical operators at runtime to figure out what to do
 * `7 < 8` is always true, but `x < y` I have no idea about until the program actually runs
 
@@ -53,10 +53,10 @@ Date: 1/7/2020 (Tuesday)
   * `If there are two slices of bread...`
   * `If there is no strawberry jelly, then eat something else`
 * Short-circuiting is a mechanism whereby the computer stops as soon as it can determine the final true/falise state
-  * `if 7 > 8 && 1 < 2`
-  * `if 7 < 8 || 1 < 2`
-  * `if x == y && u > v`
-  * `if x == y || u == v`
+  * `if 7 > 8 and 1 < 2`
+  * `if 7 < 8 or 1 < 2`
+  * `if x == y and u > v`
+  * `if x == y or u == v`
 
 #### Python particulars
 * colon
