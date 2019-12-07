@@ -8,7 +8,7 @@ The goal of this lesson is to understand the difference between values and varia
 
 - The student will be able to distinguish between integer values and floating point values.
 
-- The student will be able to compose a valid assignment statement with variables names and literal values.
+- The student will be able to compose a valid assignment statement with variable names and literal values.
 
 ## Lesson
 *These concepts will be given interactively, via whiteboard/projector. Students can take notes during the discussion. Estimated time ~15 minutes.*
@@ -78,6 +78,22 @@ age = 12
 my_brothers_name = 'John'
 ```
 
+One way we can set a variable's value is by taking user input. This is done by using the `input` function.
+
+```python
+age = input('Enter a number for age')
+print("You typed: ", age)
+```
+
+Note the value that comes back from the input function will always be a string, possibly empty.
+
+To turn a number into a string, we can use `int` or `float` as a function.
+
+```python
+age = input("Enter your age")
+older = age + int(age)
+```
+
 ## Activities
 *These are meant to be given as a seperate handout so the students can work directly on their Pi. Estimated time ~ 20 minutes.*
 
@@ -124,6 +140,8 @@ print(round(a + b))
 print = 7
 print(print)
 ```
+
+6. Write a program that will convert a number entered by the user from a temperature in fahrenheit to celsius. Only print the answer with a single decimal of precision.
  
 ## Assessment
 *Seperate handout, estimated time ~10 minutes.*
@@ -134,11 +152,11 @@ print(print)
     - String
     - Boolean
 
-2. Writen an assignment statement to assign the variable *happy* to the sentance:
+2. Writen an assignment statement to assign the variable *happy* to the sentence:
 
     `"We can't all follow the green light", said Felicity.`
 
-    Print your variable out, does the sentance look correct?
+    Print your variable out, does the sentence look correct?
 
 3. Write an assignment statement to set your current age, in years, to the nearest month. Print your variable, does it look correct? How could you round it to the nearest year?
 
