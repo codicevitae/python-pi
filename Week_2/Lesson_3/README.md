@@ -13,13 +13,15 @@ The goal of this lesson is to understand the difference between values and varia
 ## Lesson
 *These concepts will be given interactively, via whiteboard/projector. Students can take notes during the discussion. Estimated time ~15 minutes.*
 
+The grammar of imperative languages is composed of statements, expressions, and values. Today we will discuss values.
+
 A *value* is a specific *thing* with a specific *type*.
 
 Simple (primitive) value types are either numbers, strings or booleans.
 
 There are two kinds of numbers, integers and floating point numbers.
 
-Floating point numbers have a period to indicate their fractional part, or an 'e' to indicate it's in exponential notation.
+Floating point numbers have a period to indicate their fractional part, or an 'e' to indicate it's in exponential notation. Floating point numbers are *not* real numbers.
 
 Neither integers nor floating point numbers ever contain commas.
 
@@ -43,6 +45,8 @@ False       # a boolean literal value
 ```
 
 Notice that string literals are surrounded by either single `'` or double `"` quotes. 
+
+Boolean values can only be true or false. The literal values for these are *True* and *False*. 
 
 A variable is a name for a value that can change. The variable can only have one specific value at time, but can be reassigned different values. We use an *assignment* statement to both introduce a new variable name and to reassign an existing name.
 
@@ -70,7 +74,7 @@ break	except	    in	    raise
 
 Identifiers must be at least a single character long, must contain only letters (upper or lowercase), digits or the underscore character (`_`) and must not begin with a digit. Variable must be valid identifiers, and my not be one of the reserved words.
 
-It is convention to use the underscore to seperate words. Here are some variable assignments.
+It is convention to use the underscore to separate words (snake-case). Here are some variable assignments.
 
 ```python
 current_temp = 45.6
@@ -95,7 +99,7 @@ older = age + int(age)
 ```
 
 ## Activities
-*These are meant to be given as a seperate handout so the students can work directly on their Pi. Estimated time ~ 20 minutes.*
+*Students can work through these activities directly on their Pi. Estimated time ~ 20 minutes.*
 
 1. Type in the following program, what does it do? Add a variable `y`, give it a value and have the print statement print the value as well (on the same line).
 
@@ -142,38 +146,3 @@ print(print)
 ```
 
 6. Write a program that will convert a number entered by the user from a temperature in fahrenheit to celsius. Only print the answer with a single decimal of precision.
- 
-## Assessment
-*Seperate handout, estimated time ~10 minutes.*
-
-1. Give an example of a literal value for each of these types:
-    - Integer number
-    - Floating point number
-    - String
-    - Boolean
-
-2. Writen an assignment statement to assign the variable *happy* to the sentence:
-
-    `"We can't all follow the green light", said Felicity.`
-
-    Print your variable out, does the sentence look correct?
-
-3. Write an assignment statement to set your current age, in years, to the nearest month. Print your variable, does it look correct? How could you round it to the nearest year?
-
-4. None of the following assignment statements alone are valid. Why?
-
-```python
-3Fold = 'Seven'
-
-a = twenty'
-
-s23.6 = 18
-
-b = for
-```
-
-5. What is the type of the following value?
-
-    '14'
-
-How could you be sure?
