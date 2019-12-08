@@ -63,13 +63,13 @@ A variable name must be a valid *identifier*. Identifiers are words that mean so
 
 Here are the reserved words:
 ```
-False   class       finally is          return
-None    continue    for	    lambda	    try
-True	def	        from	nonlocal	while
-and     del         global  not         with
-as      elif        if      for     	yield
-assert	else	    import	pass	 
-break	except	    in	    raise
+False   class       finally     is          return
+None    continue    for         lambda      try
+True    def         from        nonlocal    while
+and     del         global      not         with
+as      elif        if          for         yield
+assert  else        import      pass	 
+break   except      in          raise
 ```
 
 Identifiers must be at least a single character long, must contain only letters (upper or lowercase), digits or the underscore character (`_`) and must not begin with a digit. Variable must be valid identifiers, and my not be one of the reserved words.
@@ -123,6 +123,7 @@ three = "three"
 ```python
 a = 6
 b = a
+print('c is now', c)
 c = b + 1
 c = c - a
 print('c is now', c)
@@ -138,11 +139,25 @@ b = 11e-1
 print(round(a + b))
 ```
 
-5. Notice that our `print` statement is not a reserved word. That means we can create a variable named `print`. But is this a good idea? Try it.
+5. Rather than round, we can use the Math functions floor or ceil to change a floating point number to an integer. Since these functions are part of the Math module we have to import it first. Try this:
+
+```python
+import Math
+a = 4.7
+print(Math.floor(a))
+print(Math.ceil(a))
+```
+Verify that round, floor and ceil all return integers, how would you do that?
+
+
+6. Notice that our `print` statement is not a reserved word. That means we can create a variable named `print`. But is this a good idea? Try it.
 
 ```python
 print = 7
 print(print)
 ```
+What happens if you try this with a reserved word, like `if` ?
 
-6. Write a program that will convert a number entered by the user from a temperature in fahrenheit to celsius. Only print the answer with a single decimal of precision.
+7. Write a program that will convert a number entered by the user from a temperature in fahrenheit to celsius. Only print the answer with a single decimal of precision. 
+
+Hint: one way to get a float to single precision is to pass another argument to round, `round(a, 1)`. There are others, feel free to use them.

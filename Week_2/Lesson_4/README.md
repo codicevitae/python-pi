@@ -1,7 +1,7 @@
 # Expressions and Arithmetic
 
 ## Goal
-The goal of this lesson is understand what expressions are and how they are different from statements, and how they can cause different kinds of errors.
+The goal of this lesson is understand what expressions are, how they are different from statements, and how they can cause different kinds of errors.
 
 ## Objectives
 - The student will be able to identify the arithmetic operators and use them to create valid expressions
@@ -10,7 +10,7 @@ The goal of this lesson is understand what expressions are and how they are diff
 
 - The student will learn a few string operators and use them to create valid string expressions
 
-- The student will be able to tell the difference between syntax errors and runtime errors
+- The student will be able to tell the difference between syntax, runtime, and logic errors
 
 ## Lesson
 *These concepts will be given interactively, via whiteboard/projector. Students can take notes during the discussion. Estimated time ~15 minutes.*
@@ -54,8 +54,22 @@ While we can mix integers and floating point numbers in an expression, we can't 
 3 + 'dog'   # Returns an error
 ```
 
+Logical expressions use the logical operators. We will cover this in January with Conditional Execution, but it's useful to compare logical expressions with numeric expressions because they both occur so frequently.
 
-syntax vs traceback
+Here are the relational operators, these are used to compare two values and yield a boolean value.
+
+| Operator | What it means                                               |
+| -------- | ----------------------------------------------------------- |
+| x == y   | Does x equal y ?                                            |
+| x != y   | Does x not equal y (are they different) ?                   |
+| x < y    | Is x less than y ?                                          || x <= y   | Is x less than or equal to y ?                              |
+| x > y    | Is x greater than y ?                                       |
+| x >= y   | Is x greater than or equal to y ?                           |
+
+All of these operators work with any type that can be compared, including strings, numbers, and in some cases booleans. Remember that the comparison always yields a boolean value.
+
+
+syntax vs runtime(traceback) vs logic 
 
 
 

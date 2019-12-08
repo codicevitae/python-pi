@@ -15,7 +15,7 @@
 
     Print your variable out, does the sentence look correct?
 
-3. Write an assignment statement to set your current age, in years, to the nearest month. Print your variable, does it look correct? How could you round it to the nearest year?
+3. Write an assignment statement to set your current age, in months. Now calculate how many years that is to a single decimal place and print it out.
 
 4. None of the following assignment statements alone are valid. Why?
 
