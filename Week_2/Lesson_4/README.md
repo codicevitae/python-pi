@@ -1,16 +1,14 @@
 # Expressions and Arithmetic
 
 ## Goal
-The goal of this lesson is understand what expressions are, how they are different from statements, and how they can cause different kinds of errors.
+The goal of this lesson is understand what expressions are and how they are different from statements.
 
 ## Objectives
-- The student will be able to identify the arithmetic operators and use them to create valid expressions
+- The student will be able to identify the arithmetic operators and use them to create valid arithmetic expressions
 
-- The student will be able to identify logical operators and use them to create valid expressions
+- The student will be able to identify relational operators and use them to create valid boolean expressions
 
 - The student will learn a few string operators and use them to create valid string expressions
-
-- The student will be able to tell the difference between syntax, runtime, and logic errors
 
 ## Lesson
 *These concepts will be given interactively, via whiteboard/projector. Students can take notes during the discussion. Estimated time ~15 minutes.*
@@ -27,7 +25,7 @@ An expression is built using variables, values and operators. Each type has a se
 | x - y    | Subtraction                                                 |
 | x * y    | Multiplication                                              |
 | x / y    | Floating point division                                     |
-| x // y   | Integer division (compare to Math.floor)                    |
+| x // y   | Integer division (compare to math.floor)                    |
 | x % y    | Modular division (remainder)                                |
 | -x       | Negation (unary)                                            |
 
@@ -68,19 +66,47 @@ Here are the relational operators, these are used to compare two values and yiel
 
 All of these operators work with any type that can be compared, including strings, numbers, and in some cases booleans. Remember that the comparison always yields a boolean value.
 
+Here are some examples:
 
-syntax vs runtime(traceback) vs logic 
+```python
+9 < 10              # True
+9 > 10              # False
+'cat' == 'cat'      # True
+True == 8 < 10      # False
+True == (8 < 10)    # True
+0.333333 == (1 / 3) # False
+```
 
+Remember that floating point numbers are not precise, it's usually not a good idea to use `==` to compare them.
 
-
-
+```python
+1 - 1/3 - 1/3 - 1/3 == 0      # Should be True, but it's not
+1 - 1/3 - 1/3 - 1/3 < 1e-10   # Instead use < or >
+```
 
 ## Activities
 *Students can work through these activities directly on their Pi. Estimated time ~ 20 minutes.*
 
-1. Let the user input a number of seconds and convert this to a time of day in the format hh:mm. For example, 11900 seconds is 3:33. 
+1. Let the user input a number of seconds and convert this hours and minutes. For example, 11900 seconds is 3h 33m. 
 
-2. Modify your previous program to handle the case if the number of seconds is greater than a single day. Change the format to show days, hours and minutes. For example, 3421356 seconds is 39d 14h 22m
+2. Modify your previous program to handle the case if the number of seconds is greater than a single day. Change the format to show days, hours and minutes. For example, 3421356 seconds is 39d 14h 22m.
 
 3. If you have 1 - (1 / 2) - (1 / 2) with real numbers, the answer should be zero. Does Python calculate this to zero? What about 1 - (1 / 3) - (1 /3) - (1 / 3) ? What's the difference?
 
+    What if you do 1 - (3 * 1 / 3)? What's the difference?
+
+4. Add to your temperature conversion program from last week to print whether the temperature in celsius is below freezing or above boiling.
+
+    If you didn't get that far, you can use this one:
+
+    ```python
+    fahr = float(input('Enter temperature in F: '))
+    cel = 5 / 9 * (fahr - 32)
+    print('Celsius:', round(cel, 1))
+    ```
+
+5. Bonus: This is from last week, it's really hard. Explain the output of this:
+
+    ```python
+    type(5)('6') + 1
+    ```
