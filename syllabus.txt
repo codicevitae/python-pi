@@ -7,42 +7,41 @@ Introduction to computer science
 - Python scripts
 - Pseudocode
 
-12/10 - 12/12 - Week 2 - Jeremy
+12/10 - 12/12 - Week 2 - Jeremy (TA - Rollin, Tom)
 - Values, variables, and assignments
 - Expressions and arithmetic
 
-12/17 - 12/19 - Week 3 - (only 12/17) - Tom
+12/17 - 12/19 - Week 3 - (only 12/17) - Tom (TA - Josh, if needed)
 - Review topics (trying to get everyone comfortable with the terminal, writing the programs, running the programs, and using what they have been taught)
 - Lightning topic: abstraction
 
-01/07 - 01/09 - Week 4 - Rollin
+01/07 - 01/09 - Week 4 - Rollin (TA - ??)
 - Conditional execution
 - Branching
 
-01/14 - 01/16 - Week 5 - Tom
+01/14 - 01/16 - Week 5 - Tom (TA - ??)
 - Loops (specifically only the 'while' loop)
 - Project 1
 
-01/21 - 01/23 - Week 6 - Josh
+01/21 - 01/23 - Week 6 - Josh (TA - ??)
 - Functions
 - Project 2
 
-01/28 - 01/30 - Week 7 - Jeremy
+01/28 - 01/30 - Week 7 - Jeremy (TA - ??)
 - Collections (with the goal of using them in a 'for' loop)
 - Project 3
 
-02/04 - 02/06 - Week 8 - Rollin
+02/04 - 02/06 - Week 8 - Rollin (TA - ??)
 - Loops 2 (specifically the 'for' loop)
 - Project 4
 
-02/11 - 02/13 - Week 9 - Tom
+02/11 - 02/13 - Week 9 - Tom (TA - ??)
 - 
 
 02/18 - 02/20 - (No school, Mid-winter break)
-- 
 
 02/25 - 02/27 - Week 10
-- 
+- Final projects
 
 03/03 - 03/05 - Week 11
 - Final project
