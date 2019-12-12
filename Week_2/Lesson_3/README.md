@@ -8,10 +8,12 @@ The goal of this lesson is to understand the difference between values and varia
 
 - The student will be able to distinguish between integer values and floating point values.
 
-- The student will be able to compose a valid assignment statement with variables names and literal values.
+- The student will be able to compose a valid assignment statement with variable names and literal values.
 
 ## Lesson
 *These concepts will be given interactively, via whiteboard/projector. Students can take notes during the discussion. Estimated time ~15 minutes.*
+
+The grammar of imperative languages is composed of statements, expressions, and values. Today we will discuss values.
 
 A *value* is a specific *thing* with a specific *type*.
 
@@ -19,7 +21,7 @@ Simple (primitive) value types are either numbers, strings or booleans.
 
 There are two kinds of numbers, integers and floating point numbers.
 
-Floating point numbers have a period to indicate their fractional part, or an 'e' to indicate it's in exponential notation.
+Floating point numbers have a period to indicate their fractional part, or an 'e' to indicate it's in exponential notation. Floating point numbers are *not* real numbers.
 
 Neither integers nor floating point numbers ever contain commas.
 
@@ -44,6 +46,8 @@ False       # a boolean literal value
 
 Notice that string literals are surrounded by either single `'` or double `"` quotes. 
 
+Boolean values can only be true or false. The literal values for these are *True* and *False*. 
+
 A variable is a name for a value that can change. The variable can only have one specific value at time, but can be reassigned different values. We use an *assignment* statement to both introduce a new variable name and to reassign an existing name.
 
 An assignment statement has a variable name on the left followed by a single `=` symbol, then a valid value.
@@ -59,18 +63,18 @@ A variable name must be a valid *identifier*. Identifiers are words that mean so
 
 Here are the reserved words:
 ```
-False   class       finally is          return
-None    continue    for	    lambda	    try
-True	def	        from	nonlocal	while
-and     del         global  not         with
-as      elif        if      for     	yield
-assert	else	    import	pass	 
-break	except	    in	    raise
+False   class       finally     is          return
+None    continue    for         lambda      try
+True    def         from        nonlocal    while
+and     del         global      not         with
+as      elif        if          for         yield
+assert  else        import      pass	 
+break   except      in          raise
 ```
 
 Identifiers must be at least a single character long, must contain only letters (upper or lowercase), digits or the underscore character (`_`) and must not begin with a digit. Variable must be valid identifiers, and my not be one of the reserved words.
 
-It is convention to use the underscore to seperate words. Here are some variable assignments.
+It is convention to use the underscore to separate words (snake-case). Here are some variable assignments.
 
 ```python
 current_temp = 45.6
@@ -78,8 +82,24 @@ age = 12
 my_brothers_name = 'John'
 ```
 
+One way we can set a variable's value is by taking user input. This is done by using the `input` function.
+
+```python
+age = input('Enter a number for age')
+print("You typed: ", age)
+```
+
+Note the value that comes back from the input function will always be a string, possibly empty.
+
+To turn a number into a string, we can use `int` or `float` as a function.
+
+```python
+age = input("Enter your age")
+older = age + int(age)
+```
+
 ## Activities
-*These are meant to be given as a seperate handout so the students can work directly on their Pi. Estimated time ~ 20 minutes.*
+*Students can work through these activities directly on their Pi. Estimated time ~ 20 minutes.*
 
 1. Type in the following program, what does it do? Add a variable `y`, give it a value and have the print statement print the value as well (on the same line).
 
@@ -103,6 +123,7 @@ three = "three"
 ```python
 a = 6
 b = a
+print('c is now', c)
 c = b + 1
 c = c - a
 print('c is now', c)
@@ -118,44 +139,25 @@ b = 11e-1
 print(round(a + b))
 ```
 
-5. Notice that our `print` statement is not a reserved word. That means we can create a variable named `print`. But is this a good idea? Try it.
+5. Rather than round, we can use the Math functions floor or ceil to change a floating point number to an integer. Since these functions are part of the Math module we have to import it first. Try this:
+
+```python
+import Math
+a = 4.7
+print(Math.floor(a))
+print(Math.ceil(a))
+```
+Verify that round, floor and ceil all return integers, how would you do that?
+
+
+6. Notice that our `print` statement is not a reserved word. That means we can create a variable named `print`. But is this a good idea? Try it.
 
 ```python
 print = 7
 print(print)
 ```
- 
-## Assessment
-*Seperate handout, estimated time ~10 minutes.*
+What happens if you try this with a reserved word, like `if` ?
 
-1. Give an example of a literal value for each of these types:
-    - Integer number
-    - Floating point number
-    - String
-    - Boolean
+7. Write a program that will convert a number entered by the user from a temperature in fahrenheit to celsius. Only print the answer with a single decimal of precision. 
 
-2. Writen an assignment statement to assign the variable *happy* to the sentance:
-
-    `"We can't all follow the green light", said Felicity.`
-
-    Print your variable out, does the sentance look correct?
-
-3. Write an assignment statement to set your current age, in years, to the nearest month. Print your variable, does it look correct? How could you round it to the nearest year?
-
-4. None of the following assignment statements alone are valid. Why?
-
-```python
-3Fold = 'Seven'
-
-a = twenty'
-
-s23.6 = 18
-
-b = for
-```
-
-5. What is the type of the following value?
-
-    '14'
-
-How could you be sure?
+Hint: one way to get a float to single precision is to pass another argument to round, `round(a, 1)`. There are others, feel free to use them.
