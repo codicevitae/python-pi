@@ -95,7 +95,7 @@ Remember that floating point numbers are not precise, it's usually not a good id
 
     What if you do 1 - (3 * 1 / 3)? What's the difference?
 
-4. Add to your temperature conversion program from last week to print whether the temperature in celsius is below freezing or above boiling.
+4. Add to your temperature conversion program from last week to print whether the temperature in celsius is below freezing (0) or above boiling (100).
 
     If you didn't get that far, you can use this one:
 
@@ -105,8 +105,12 @@ Remember that floating point numbers are not precise, it's usually not a good id
     print('Celsius:', round(cel, 1))
     ```
 
-5. Bonus: This is from last week, it's really hard. Explain the output of this:
+5. Run your program from #4, use these values to test:
 
     ```python
-    type(5)('6') + 1
+    211.99999999999999999999999999999999999999999
+    32.000000000000000000000000000000001
     ```
+
+    Do they work? If not, how would you fix them?
+
