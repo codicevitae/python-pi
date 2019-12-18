@@ -19,7 +19,7 @@ Introduction to computer science
 - Conditional execution
 - Branching
 
-01/14 - 01/16 - Week 5 - Tom (TA - ??)
+01/14 - 01/16 - Week 5 - Tom (TA - Josh)
 - Loops (specifically only the 'while' loop)
 - Project 1
 
