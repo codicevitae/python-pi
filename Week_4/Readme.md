@@ -7,8 +7,8 @@ Date: 1/7/2020 (Tuesday)
 * To understand what an algorithm is
 * To understand the value of conditional execution
 * To understand how to test for conditions
-* To understand if and if-else statements
-* To understand Python's if-else syntax and indentation requirements
+* To understand if statements
+* To understand Python's if syntax and indentation requirements
 
 #### Background/Review
 * What does a computer do? (Exactly what you tell it to!)
@@ -20,18 +20,21 @@ Date: 1/7/2020 (Tuesday)
 * Why don't we have to think in ones and zeros? (Abstraction - higher-level langages are our friends!)
 
 #### Algorithms
+* See if anyone can define the term in their own words.
 * How do you define a process or solution to a problem?
 * An algorithm is a set of instructions designed to achieve a certain goal or solve a certain problem
 * We all use algorithms every day of our lives, we just may not call them that
   1. How do you get ready for school in the morning?
   2. How do you make your bed?
-  3. How do you make a Peanut Butter Sandwich? (Class participation - write an algorithm on the board based on their ideas)
+  3. How do you make a Peanut Butter Sandwich? 
+* Class participation - write an algorithm for PB&J on the board based on their input for steps
 
 #### Limitations of Linear Program Flow
+* Have students review what commands they have learned
 * So far the instructions you have given the computer have been linear sequences of simple instructions
 * All instructions executed once and once only
 * No chance to deal with problems that arise
-* Using PB&J algorithm from above, discuss the drawbacks of having one fixed set of instrctions that happen once each
+* Using PB&J algorithm from earlier, discuss the drawbacks of having one fixed set of instrctions that happen once each
   * What if the bag of bread is empty?
   * How do you know when to stop putting PB on the bread?
   * What if you stop after one scoop of jelly? Is it enough?
