@@ -10,14 +10,22 @@ Date: 1/7/2020 (Tuesday)
 * To understand if and if-else statements
 * To understand Python's if-else syntax and indentation requirements
 
+#### Background/Review
+* What does a computer do? (Exactly what you tell it to!)
+* How does a computer store and process data and instructions?
+  1. Ones and Zeros
+  2. Review binary discussion
+  3. Stored on disk as on/off bits magnetically
+  4. Processed in CPU as on/off bit electrically and/or magnetically
+* Why don't we have to think in ones and zeros? (Abstraction - higher-level langages are our friends!)
+
 #### Algorithms
 * How do you define a process or solution to a problem?
-* How do you make a peanut butter and jelly sandwich?
 * An algorithm is a set of instructions designed to achieve a certain goal or solve a certain problem
 * We all use algorithms every day of our lives, we just may not call them that
   1. How do you get ready for school in the morning?
   2. How do you make your bed?
-  3. How do you make a Peanut Butter Sandwich?
+  3. How do you make a Peanut Butter Sandwich? (Class participation - write an algorithm on the board based on their ideas)
 
 #### Limitations of Linear Program Flow
 * So far the instructions you have given the computer have been linear sequences of simple instructions
@@ -33,18 +41,25 @@ Date: 1/7/2020 (Tuesday)
 #### Logical Operators
 * Have already covered Boolean type (TRUE/FALSE)
 * `<, >, ==, !=, >=, <=`
-* `and, or, not`
+  * `1 < 2` (True)
+  * `2 < 1` (False)
+* Can be chained using `and, or, not`
+  * `1 < 2 and 2 < 4` (True)
+  * `1 < 2 and 4 < 1` (False)
+  * `1 < 2 or 4 < 1` (True)
+  * `1 < 2 or 2 < 4` (True)
+  * `not 1 > 2` (True)
 * These allow us to produce boolean values based on the comparison of logical statements
-  * `x = 7 < 8` (x = true)
-  * `a = 7 >= 8` (a = false)
+  * `x = 1 < 2` (x = true)
+  * `a = 1 >= 2` (a = false)
   * `b = 1 != 2` (b = true)
   * `isEqual = x == y` (true or false depending on what is in `x` and `y`)
-* Logical statements can be combined or chained
+* Logical statements in assignments can also be combined or chained
   * `x = 7 > 8 or 1 < 3` 
   * `a = x == y and u == v`
 * Logical statements can be grouped
-  * `x = (7 < 8 or 1 < 3) and 5 < 4`
-  * `a = (x == y and u == v) or true`
+  * `x = (7 < 8 or 1 < 3) and 5 < 4` (False)
+  * `a = (x == y and u == v) or true` (True)
 * Logic in our algorithms comes from using these logical operators at runtime to figure out what to do
 * `7 < 8` is always true, but `x < y` I have no idea about until the program actually runs
 
@@ -62,9 +77,21 @@ Date: 1/7/2020 (Tuesday)
 * colon
 * indentation
 * multiple statement blocks
+* Example:
+   ```
+  if x > y:
+    print("x is greater than y")
+  ```
 
 #### Lab Exercises
-* TBD
+* Write a short Python script that you can run at the command line that will:
+  1. Request two input values
+  2. Compare them
+  3. If the first is less than the second, print out a statement telling the user the first is less than the second
+* Stretch Goals:
+  1. In the results printed out, include the actual values entered
+  2. What happens if you do not enter number values?
+  3. What happens if you enter one numeric value and one string? Two strings?
 
 ## Day 2 - 
 Date: 1/9/20 (Thursday)
