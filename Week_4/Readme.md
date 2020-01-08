@@ -1,4 +1,4 @@
-## Day 1
+## Week 4 Day 1
 Date: 1/7/2020 (Tuesday)
 
 ## Lesson: Conditional Execution
@@ -96,18 +96,18 @@ Date: 1/7/2020 (Tuesday)
   2. What happens if you do not enter number values?
   3. What happens if you enter one numeric value and one string? Two strings?
 
-## Day 2 - 
+## Week 4 Day 2 - 
 Date: 1/9/20 (Thursday)
 
 ## Lesson: Branching
 
 #### Goals:
-* To understand more complex conditional statments (if-else and if-elif-else)
+* To understand more complex conditional statements (if-else and if-elif-else)
 * To understand how to nest conditional statements 
 * To understand Python's syntax and indentation requirements
 
-#### IF/ELSE
-* What if an IF statement is not enough?
+#### if-else
+* What if an `if` statement is not enough?
 * What if I need to take different actions based on the true/false result of a statement?
   * I can say:
     ```
@@ -117,7 +117,8 @@ Date: 1/9/20 (Thursday)
       print('nope')
     ```
   * But I always want one and only one of those to happen, why check twice?  
-* IF/ELSE Checks for a condition and goes one of two ways (branching)
+
+* `if-else` Checks for a condition and goes one of two ways (branching)
   * Now I can say:
     ```
       if x == y:
@@ -129,30 +130,173 @@ Date: 1/9/20 (Thursday)
   * Easier to understand what I mean
   * No chance both statements will ever be executed!
   
-#### IF/ELIF/ELSE
+#### if / elif / else
 * What if two options is not enough?
-* IF/ELIF/ELSE Checks for multiple conditions in order and executes one (and only one) option
-* IF/ELIF/ELIF/ELIF/ELIF/ELIF/ELSE
+
+* `if-elif-else` Checks for multiple conditions in order and executes one (and only one) option
+* `elif` is a short-hand way of saying "else if"
+
+  ```
+  if condition_1:
+    ...
+  elif condition_2:
+    ...
+  else:
+    ...
+  ```
+
+* `if-elif-elif-elif-elif-elif-elif-elif-else`
   * Can get as complex as you need it to
   * There are usually better ways, though!
 
-#### Nested Logical Statements
-* Nested IF statements
-* Indentation is key
+#### Nested `if` Statements
+* You can "nest" if statements within each other
+* Indentation is key so Python knows which commands are in which block
+* Can get complicated quickly!
 
-#### Stretch Goals Based on Time
-* Simplifying Logical statements
-  * Can spend weeks talking about how to simplify logic
-  * Use short-circuiting to your benefit
-  * Try to avoid overly complex statements that are:
-    1. Hard to understand
-    2. Prone to typos
-    3. Hard to test and find problems
+  ```
+  if _condition 1 :
+    ...
+    ...
+    if condition_2 :
+      ...
+      ...
+      if condition_3 :
+        ...
+        ...
+      else:
+        ...
+        ...
+    else:
+     ...
+     ...
+  else:
+    ...
+    ...
+  ```
+  
+* Can get as complex as you need it to
+* There are usually better ways, though!
+
+#### Misc thoughts on complexity
 * Think about how to test your code as you write it
   * For every level of nesting, you have more test cases to try to make sure things work
   * The more you simplify the logic of your program, the easier it is to test
-  * Cyclical complexity is a term that describes the number of possible paths through your code
-  * Greater cyclical complexity leads to bugs that are harder to find and code that is harder to read
+  * The easier it is to test your program, the more confidence you can have that it is doing what you want!
   
 #### Lab Exercises
-TBD
+* Evaluate as a group to understand what will happen:
+  * What will be printed out and why?
+    ```
+    x = 7
+    if x < 10:
+      x = 10
+    else:
+      x = 0
+      print(x)
+    ```
+  
+  * Make a small change below. Now what will be printed?
+    ```
+    x = 7
+    if x < 10:
+      x = 10
+    else:
+      x = 0
+    print(x)
+    ```
+  
+  * What will appear after running the following `if/elif/else` statement?
+    ```
+    x = 0
+    y = 10
+    if x < y:
+      x = y
+    elif x == y:
+      x = x - 1
+    else:
+      x = 0
+    print(x)
+    print(y)
+    ```
+  
+* Guided Exercises:
+  * Type in the following commands and see if it behaves the way you expect (either in a new file in nano or in the Python3 shell)
+
+    ```
+    x = 100
+    y = 101
+    if x < y:
+      x = x + 1
+    
+    if x < y: 
+      print(x, "is less than", y)
+    elif x > y:
+      print(x, "is greater than", y)
+    else:
+      print(x, "is equal to", y)
+    ```
+  
+  * Type in the following commands and see if it behaves the way you expect (either in a new file in nano or in the Python3 shell)
+
+    ```
+    x = True
+    y = False
+    if x or y:
+      print("at least one is true")
+    else:
+      print("both are false")
+    
+    if x and y:
+      print("both are true")
+    else:
+      print("at least one is false")
+  
+    if x not y:
+      print("x is true and y is false")
+    else:
+      print("x is false or y is true")
+    ```
+
+* Individual Exercises for further exploration:
+  * Write commands to take two input numbers and print out a different message when:
+    
+    a. the first is greater than the second, 
+    
+    b. they are equal, or 
+    
+    c. the first is less than the second
+    
+    Remember the `input()` and `eval()` commands from last class in order to treat the input as a Number rather than a String:
+    ```
+    x = eval(input("Enter a number: "))
+    ```
+    This will interpret the input as a number rather than a text string, so that the comparison can be done correctly
+
+  * Write commands to prompt the user for their name. Write out different greetings based on whether their name is:
+
+    a. Fred
+
+    b. George
+
+    c. your name
+
+    d. anyone else
+    
+
+#### Short-Circuiting
+* The computer only evaluates as much as it must to get its answer.
+* It will stop as soon as it hits a condition that makes the overall statement False
+
+* Example:
+  ```
+  if (1 < 0 and 3 < 4) and (5 < 6 or 0 == 0):
+  ```
+  * This will stop as soon as it evaluates `1 < 0` as false because nothing else on that line will make the overall statement true.
+* Example:
+  ```
+  if (1 < 0 and 3 < 4) or (5 < 6 and 0 == 0):
+  ```
+  * This has to evaluate the entire line because the `or` means even if the first part is false, the overall expression could still be true
+
+* Don't worry about short-circuiting for simple programs, but it will save the computer time and resources if you keep in mind that it is possible as things get more complicated.
