@@ -143,7 +143,7 @@ As an example, let's look at the problem of summing the numbers from 1 to ```n``
 
 sum = 0
 current = 1
-# initialization: sum is the sum of numbers from 0 to current - 1
+# initialization: sum is the sum of numbers from 0 to (current - 1)
 
 while (current <= n):
   # maintenance before loop
@@ -151,7 +151,7 @@ while (current <= n):
   current = current + 1
   # maintenance after loop
 
-# termination: at the end of the loop, sum is n + 1
+# termination: sum of numbers from 0 to current
 ```
 ### Infinite loops
 
@@ -171,6 +171,8 @@ while (num_bottles > 0):
 ```
 
 Will this program ever finish?
+
+
 
 # Day 2: While loops
 
