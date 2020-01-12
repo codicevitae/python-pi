@@ -13,7 +13,7 @@ Specifically:
 
 - The students will understand the anatomy of an ```indefinite loop``` (aka, the ```while loop```)
 
-- The students will understand the difference between loop variants and loop invariants and how they combine to do useful work in a computer program
+- The students will understand the what a loop invariant is how it helps ensuring the correcness of a loop
 
 - The student will learn what an ```infinite loop``` is, will be to identify situations that cause one, and learn a couple "good ideas" for avoiding creating one.
 
@@ -62,7 +62,7 @@ These constructs are known as ```definite loops``` and are often implemented in 
 
 But, what about "try, try again"?  *When* will you succeed?  *Will* you succeed?  These are known as ```indefinte loops``` and is a typical use-case for a ```while``` loop.
 
-#### Anatomy of an indefinite loop in Python
+### Anatomy of an indefinite loop in Python
 
 One of the first loops I ever wrote was something like this (though I wrote it in BASIC, not Python).
 
@@ -78,17 +78,13 @@ The ```loop condition``` is a test of whether the variable ```i``` is less than 
 
 The ```loop body``` was message I wanted my sister to see when she ran my program.
 
-#### Loop variants and invariants
-
-It's often the case that much of the logic in our loop body will be the same each iteration.  These are loop ```invariants```.  
+It's often the case that much of the logic in our loop body will be the same each iteration.
 
 In the example I gave, it's the print statement.  That will execute the same exact thing each time.  
 
-The assignment to ```i``` is a litte different.  The value of ```i``` changes each iteration.  We can say that ```i``` is a ```loop variant```, or loop variable.
+The assignment to ```i``` is a litte different.  The value of ```i``` changes each iteration -- and it better, otherwise the loop will never end (more on this later).
 
-You need at least one loop variant if you ever expect your loop to end!  (More on this, later).
-
-Loops become more interesting and more powerful when you can combine these concepts.
+Loops become more interesting and more powerful when you can combine the concepts of changing and unchanging logic.
 
 Contast
 
@@ -120,7 +116,7 @@ while (num_bottles > 0):
 
 Which would you rather write and/or review for correctness? (did you spot the mistake I made in the first program?)
 
-Identifying and separating the variant logic from the invariant logic and utilizing a loop construct to simplify your programs is a super-power computer scientists have.  It's one you will develop as you practice more programming.  In other words:
+Identifying and separating the logic that changes each iteration from logic that stays the same to utilize a loop construct is a super-power computer scientists have.  It's one you will develop as you practice more programming.  In other words:
 
 ```python
 is_perfect = False
@@ -128,6 +124,35 @@ while (not is_perfect):
    is_perfect = practice()
 ```
 
+
+### Loop invariants
+
+Sometimes, designing a loop and/or understanding what it does is challenging.  ```Loop invariants``` are statements about your program that make it easier to understand its execution.
+
+More formally, A ```loop invariant``` is a statement about program variables that is true *before* and *after* each iteration of a loop.
+
+A loop invariant has 3 main parts:
+
+Initialization: The loop invariant must be true before the first execution of the loop.
+Maintenance: If the invariant is true before an iteration of the loop, it should be true also after the iteration.
+Termination: When the loop is terminated the invariant should tell us something that helps us understand the program.
+
+As an example, let's look at the problem of summing the numbers from 1 to ```n```, where n is some number such that ```n >= 1```.  We can solve this problem using a loop.
+
+```python
+
+sum = 0
+current = 1
+# initialization: sum is the sum of numbers from 0 to current - 1
+
+while (current <= n):
+  # maintenance before loop
+  sum = sum + current
+  current = current + 1
+  # maintenance after loop
+
+# termination: at the end of the loop, sum is n + 1
+```
 ### Infinite loops
 
 It's perfectly sensible to not know up front how many `iterations` your loop will have, or even if it will ever end.
@@ -145,7 +170,7 @@ while (num_bottles > 0):
    print(num_bottles, "bottles of beer on the wall.")
 ```
 
-Will this program ever finish?  Why?
+Will this program ever finish?
 
 # Day 2: While loops
 
