@@ -7,17 +7,21 @@ Video [here](https://www.youtube.com/watch?v=T3hV1qSF-3U)
 Powerpoint [here](https://1drv.ms/p/s!AlitrBXgrF2Biukd1fh8y0JKBWpAcA?e=nHzyxZ).
 
 ## Goals & Objectives
-The goal of this lesson is to understand what a loop is in programming, when a loop is an appropriate tool for solving a programming problem, and the syntax for implementing an "indefinite" loop in Python using the ```while``` construct.
+
+The goal of this lesson is to understand what a loop is in programming, when a loop is an appropriate tool for solving a programming problem, and the syntax for implementing an "indefinite" loop in Python using the `while` construct.
 
 Specifically:
 
-- The students will understand the anatomy of an ```indefinite loop``` (aka, the ```while loop```)
+- The student will understand the anatomy of a `loop` in programming
 
-- The students will understand the what a loop invariant is how it helps ensuring the correcness of a loop
+- The student will understand the difference between a `definite loop` and an `indefinite loop`
 
-- The student will learn what an ```infinite loop``` is, will be to identify situations that cause one, and learn a couple "good ideas" for avoiding creating one.
+- The student learn how to apply the pattern of an indefinite loop to validate user input
+
+- The student will learn what an `infinite loop` is, will be to identify situations that cause one, and learn a couple "good ideas" for avoiding creating one.
 
 ## Lesson
+
 *These concepts will be given interactively, via whiteboard/projector. Students can take notes during the discussion. Estimated time ~15 minutes.*
 
 ### Loop introduction
@@ -34,6 +38,7 @@ The concept of a loop is fairly common in everyday experience, although we rarel
 - Many examples in music!
 
 If you analyze it, each of these examples share two main components:
+
 - A ```condition``` to test
 - A ```body``` to "execute" if the condition is met.
 
@@ -47,9 +52,10 @@ Computers are excellent at executing statements exactly the same way over and ov
 
 But, it's boring *for us* to type in the same commands over and over again.  And, bored programmers make mistakes.  Loops allow us to specify a tractable number of instructions and then ask the computer to do the busy work of repeating it over and over again, until some condition is met.  And, it's not uncommon to want to repeat a sequence of instructions more than once, sometimes in the exact same form, sometimes slightly changed.
 
-### Indefinite loops
+### Indefinite vs definite loops
 
 We talked about the similarity of my loop examples, earlier.  But, there's one big difference between the first two of these and the last.  
+
 - Walk down the hall until the end, then make a right
 - Work until 5pm
 - If at first you don't succeed, try, try, again
@@ -58,11 +64,11 @@ In the first two examples, there's a *definite* end to the loop.
 
 In the case of a hymn, we know how many verses there will be up front.
 
-These constructs are known as ```definite loops``` and are often implemented in Python using something called a ```for loop```, which you'll learn more about later.
+These constructs are known as `definite loops` and are often implemented in Python using something called a `for loop`, which you'll learn more about later.
 
 But, what about "try, try again"?  *When* will you succeed?  *Will* you succeed?  These are known as ```indefinte loops``` and is a typical use-case for a ```while``` loop.
 
-### Anatomy of an indefinite loop in Python
+### Anatomy of a while loop in Python
 
 One of the first loops I ever wrote was something like this (though I wrote it in BASIC, not Python).
 
@@ -74,15 +80,15 @@ while (i < 10):
 ```
 Let's apply the anatomy lesson to this syntax.
 
-The ```loop condition``` is a test of whether the variable ```i``` is less than 10.
+The `loop condition` is a test of whether the variable `i` is less than 10.
 
-The ```loop body``` was message I wanted my sister to see when she ran my program.
+The `loop body` was message I wanted my sister to see when she ran my program.
 
 It's often the case that much of the logic in our loop body will be the same each iteration.
 
 In the example I gave, it's the print statement.  That will execute the same exact thing each time.  
 
-The assignment to ```i``` is a litte different.  The value of ```i``` changes each iteration -- and it better, otherwise the loop will never end (more on this later).
+The assignment to `i` is a litte different.  The value of `i` changes each iteration -- and it better, otherwise the loop will never end (more on this later).
 
 Loops become more interesting and more powerful when you can combine the concepts of changing and unchanging logic.
 
@@ -108,7 +114,7 @@ num_bottles = 99
 while (num_bottles > 0):
    print(num_bottles, "bottles of beer on the wall,", num_bottles, "bottles of beer.")
    print("Take one down, pass it around...")
-   
+
    num_bottles = num_bottles - 1
 
    print(num_bottles, "bottles of beer on the wall.")
@@ -124,35 +130,21 @@ while (not is_perfect):
    is_perfect = practice()
 ```
 
+### Example use-case of an indefinite loop
 
-### Loop invariants
-
-Sometimes, designing a loop and/or understanding what it does is challenging.  ```Loop invariants``` are statements about your program that make it easier to understand its execution.
-
-More formally, A ```loop invariant``` is a statement about program variables that is true *before* and *after* each iteration of a loop.
-
-A loop invariant has 3 main parts:
-
-Initialization: The loop invariant must be true before the first execution of the loop.
-Maintenance: If the invariant is true before an iteration of the loop, it should be true also after the iteration.
-Termination: When the loop is terminated the invariant should tell us something that helps us understand the program.
-
-As an example, let's look at the problem of summing the numbers from 1 to ```n```, where n is some number such that ```n >= 1```.  We can solve this problem using a loop.
+Even though the beer song use a while loop, it is technically a definite loop because is executes exactly 99 times.  But, what about this slight modification?
 
 ```python
+num_bottles = int(input("How many bottles are there? "))
+while (num_bottles > 0):
+   print(num_bottles, "bottles of beer on the wall,", num_bottles, "bottles of beer.")
+   print("Take one down, pass it around...")
 
-sum = 0
-current = 1
-# initialization: sum is the sum of numbers from 0 to (current - 1)
+   num_bottles = num_bottles - 1
 
-while (current <= n):
-  # maintenance before loop
-  sum = sum + current
-  current = current + 1
-  # maintenance after loop
-
-# termination: sum of numbers from 0 to current
+   print(num_bottles, "bottles of beer on the wall.")
 ```
+
 ### Infinite loops
 
 It's perfectly sensible to not know up front how many `iterations` your loop will have, or even if it will ever end.
@@ -164,7 +156,7 @@ num_bottles = 99
 while (num_bottles > 0):
    print(num_bottles, "bottles of beer on the wall,", num_bottles, "bottles of beer.")
    print("Take one down, pass it around...")
-   
+
    num_bottles - 1
 
    print(num_bottles, "bottles of beer on the wall.")
@@ -172,15 +164,13 @@ while (num_bottles > 0):
 
 Will this program ever finish?
 
-
-
 # Day 2: While loops
 
 ## Common loop patterns
 
-### Interactive loops
+### Input validation loops
 
-When would you want to use an indefinite, or even "infinite" loop?  One good use of the indefinite loop is to write interactive loops. Interactive loops allow a user to repeat certain portions of a program based on user input, and keep looping until the user provides a valid input.
+When would you want to use an indefinite loop?  One good use of the indefinite loop is to write an `interactive loop` for validating input.
 
 Suppose we want to write a program to compute whether a year is a leap year or not.  The program will ask for a year and then print "YYYY is a leap year" or "YYYY is not a leap year".
 
@@ -196,9 +186,31 @@ while (not year_input.isnumeric()):
 # etc
 ```
 
+### Sentinel loops
+
+A sentinel loop is a loop where the loop condition is a test against a "well-known" value.  The loop will continue until that value is reached.
+
+For example, imagine you want to print out the average of a bunch of test scores.   The scores will be input into your program one at a time and the program will print the current average after each iteration.
+
+Here's how that might look:
+
+```python
+sum = 0.0 # note: we need a floating point number
+count = 0
+score = float(input('Enter a test score: '))
+while num >= 0:
+   sum = sum += score
+   count += 1
+
+   score = float(input('Enter another test score: '))
+    print("The average so far is ", sum / count)
+```
+
+There is a drawback to this pattern:  in this example, you can't add negative numbers to your input domain.  In general, the problem is that the 'sentinel' is a bit of a magic value that might be a bit arbitrary or unintuitive.
+
 ### 'Loop and a half' (aka 'break' statements)
 
-Sometimes, it's more convenient to *explicitly* tell Python to STOP looping, rather than implicitly doing it via the variant ```while condition```.  
+Sometimes, it's more convenient to *explicitly* tell Python to STOP looping, rather than implicitly doing it by making the while condition fail.
 
 Let's take the leap year example again.
 
@@ -217,16 +229,22 @@ while (True):
 # etc
 ```
 
-The break statement is the keywork you can use to tell Python to stop looping.  
-Some people frown upon these "short-circuit" patterns, but for simple cases it can be pretty useful.
+The break statement tells Python to "break out" of the nearest loop.
+
+Some people frown upon these "short-circuit" patterns, but for simple cases it can be pretty useful and lead to cleaner looking code.  Notice in this case I only need this line once:
+
+```python
+   year_input = input("Please enter a year (YYYY): ")
+```
 
 ### Nested loops
 
-The examples we've looked at, so far, have had a single ```while``` loop.  But, you can put a ```while``` loop inside another ```while``` loop!
+I mentioned that the `break` keyword breaks out of the *nearest* loop.  And, indeed, you can put a loop inside of another loop!
 
 For example, suppose we want to print out the times table.  One way to do it would be something like
 
 ```python
+
 x = 1
 
 # 1x
@@ -258,13 +276,13 @@ x = 1
 # yawm
 ```
 
-This works, but it's boring.  We can do better.
+This works, but it's boring.  We can do better.  Do you see the pattern above?
 
 ```python
 
 y = 1
 
-# 
+#
 while (y <= 10):
    x = 1
 
@@ -276,7 +294,40 @@ while (y <= 10):
    y = y + 1
 
 ```
+
 ### File loops
 
-TBD
+A disadvantage of many of the examples I've shown is that they require iterative user input.
+
+Would you want to input 50 test scores, individually?  What if you make a mistake on the last one?  Many programs use files as inputs and Python makes this very easy to do.
+
+Suppose we have a file, `scores.txt`, that has each test score on it's own line.  Something like this
+
+```text
+85
+89
+72
+44
+100
+```
+
+The following Python program will read each line, one at a time, until there are no more lines.
+
+```python
+infile = open('scores.txt','r')
+sum = 0.0
+count = 0
+
+# read the next line
+line = infile.readline()
+
+# while there is another line of text
+while line:
+    sum = sum + float(line)
+    count = count + 1
+    print("\nThe average of the numbers is", sum / count)
+
+    line = infile.readline()
+```
+
 
