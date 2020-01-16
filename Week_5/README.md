@@ -48,7 +48,7 @@ You've already learned, last week, the boolean expressions that govern a if/then
 
 Why is this useful?
 
-Computers are excellent at executing statements exactly the same way over and over and over again.  They don't get bored! 
+Computers are excellent at executing statements exactly the same way over and over and over again.  They don't get bored!
 
 But, it's boring *for us* to type in the same commands over and over again.  And, bored programmers make mistakes.  Loops allow us to specify a tractable number of instructions and then ask the computer to do the busy work of repeating it over and over again, until some condition is met.  And, it's not uncommon to want to repeat a sequence of instructions more than once, sometimes in the exact same form, sometimes slightly changed.
 
@@ -60,7 +60,7 @@ We talked about the similarity of my loop examples, earlier.  But, there's one b
 - Work until 5pm
 - If at first you don't succeed, try, try, again
 
-In the first two examples, there's a *definite* end to the loop. 
+In the first two examples, there's a *definite* end to the loop.
 
 In the case of a hymn, we know how many verses there will be up front.
 
@@ -70,12 +70,12 @@ But, what about "try, try again"?  *When* will you succeed?  *Will* you succeed?
 
 ### Anatomy of a while loop in Python
 
-One of the first loops I ever wrote was something like this (though I wrote it in BASIC, not Python).
+One of the first loops I ever wrote was something like this:
 
 ```python
 i = 0
 while (i < 10):
-   print("Tom is cool!!!!")
+   print("I'm the best")
    i = i + 1
 ```
 Let's apply the anatomy lesson to this syntax.
@@ -220,7 +220,7 @@ Anolther way to implement that is:
 
 while (True):
    year_input = input("Please enter a year (YYYY): ")
-   if (not year_input.isnumeric()):
+   if (year_input.isnumeric()):
       break
 
    print("That's not a year!")

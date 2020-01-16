@@ -1,4 +1,3 @@
-
 # Loops
 
 ## Activities
@@ -9,12 +8,14 @@ Consider the program below.  How many asterisks are printed?
 
 ```python
 a = 0
-while a < 100:
+while a < 10:
     print('*', end='')
     a += 1
 
 print()
 ```
+
+Input the program, either in the REPL or a file, and see if you're correct.
 
 ### Question 2
 
@@ -22,11 +23,13 @@ Consider the program below.  How many asterisks are printed?
 
 ```python
 a = 0
-while a < 100:
+while a < 10:
     print('*', end='')
 
 print()
 ```
+
+Input the program, either in the REPL or a file, and see if you're correct.
 
 ### Question 3
 
@@ -40,6 +43,8 @@ while a > 100:
 
 print()
 ```
+
+Input the program, either in the REPL or a file, and see if you're correct.
 
 ### Question 4
 
@@ -57,13 +62,15 @@ while (i < 5):
    i += 1
 ```
 
+Input the program, either in the REPL or a file, and see if you're correct.
+
 ### Question 5
 
 A factorial number, written like this, $n!$, is equal to the first $n$ numbers multiplied together.  For example, 
 
 $$4! = 4 \times 3 \times 2 \times 1 = 24$$
 
-Modify the program from question 4 to print out the values of the first 5 factorial numbers.  That is, 
+Modify the program from question 4 to print out the values of the first 5 factorial numbers.  That is,
   
 $$1!, 2!, 3!, 4!, 5!$$
 
@@ -77,7 +84,7 @@ Hint:  you can use the library function, isNumeric(), to determine whether an st
 
 ```python
 entered = input('Please enter a number: ')
-if (entered.isNumeric()):
+if (entered.isnumeric()):
    print("Yup, that's a number")
 ```
 
