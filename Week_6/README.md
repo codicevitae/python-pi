@@ -15,7 +15,7 @@ You can think of a function as a subprogram - a small program within a program (
 We have used various types of functions without knowing it:
 - `print`
 - `input`
-- `Math.floor`
+- `math.floor`
 
 ## Function definition
 
