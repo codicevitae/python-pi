@@ -83,16 +83,15 @@ Python also supports the **key** = **value** style arguments for function calls.
 ```python
 def myFunction(name, age):
     print("Hello ", name)
-    if birthday:
-        print("Happy birthday" )
+    if age > 65:
+        print("You are a senior citizen")
 
-myFunction(name = "Josh", age = )
+myFunction(age = 1234, name = "Josh")
 ```
 
 ### Exercise
 
 - Modify your `greet` function to take in the name of the user and their age. 
 - Call this function more than once with different names and ages. 
-- Call the function at least once with one of the 
-- Raise your hand when done.
+- Call the function at least once with one of the arguments missing.
 
