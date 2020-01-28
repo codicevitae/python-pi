@@ -147,10 +147,25 @@ a = 4.7
 print(Math.floor(a))
 print(Math.ceil(a))
 ```
+
+## Assessment
+*Seperate handout, estimated time ~10 minutes.*
+
+1. Give an example of a literal value for each of these types:
+    - Integer number
+    - Floating point number
+    - String
+    - Boolean
+
+2. Writen an assignment statement to assign the variable *happy* to the sentence:
+
+    `"We can't all follow the green light", said Felicity.`
+
+    Print your variable out, does the sentence look correct?
+
 Verify that round, floor and ceil all return integers, how would you do that?
 
-
-6. Notice that our `print` statement is not a reserved word. That means we can create a variable named `print`. But is this a good idea? Try it.
+3. Notice that our `print` statement is not a reserved word. That means we can create a variable named `print`. But is this a good idea? Try it.
 
 ```python
 print = 7
@@ -158,6 +173,6 @@ print(print)
 ```
 What happens if you try this with a reserved word, like `if` ?
 
-7. Write a program that will convert a number entered by the user from a temperature in fahrenheit to celsius. Only print the answer with a single decimal of precision. 
+4. Write a program that will convert a number entered by the user from a temperature in fahrenheit to celsius. Only print the answer with a single decimal of precision. 
 
 Hint: one way to get a float to single precision is to pass another argument to round, `round(a, 1)`. There are others, feel free to use them.
