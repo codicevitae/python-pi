@@ -5,13 +5,19 @@
 
 import random
 
+#
 # This function picks a word at random from a list
+#
 def pick_word():
-	words = [ 'apple', 'pickle', 'orange', 'bannana', 'refulgence', 'superstitious' ]
+	words = [ 'apple', 'pickle', 'orange', 'bannana', 'refulgence', 'superstitious',
+		  'refrigerator', 'omelette', 'latte', 'ocean', 'indulgence', 'propitiation' ]
+
 	return words[random.randrange(len(words))]
 
+#
 # This function prints the word with blanks for letters that have
 # not been guessed
+#
 def show_blanked_out(word, guesses):
 	blanked = ''
 	for letter in word:
@@ -21,11 +27,12 @@ def show_blanked_out(word, guesses):
 			blanked = blanked + '_ '	
 
 	print(blanked)
+	print('\n')
 
 
 # Our main program
 def game():
-	print('Welcome to Hangman!')
+	print('Welcome to Hangman!\n')
 
 	MAX_GUESSES = 5
 	incorrect_guesses = 0
@@ -41,13 +48,14 @@ def game():
 
 		# The 'in' operator can check if a string is in a list (or another string)
 		if guess in incorrect_guesses or guess in correct_guesses:
-			print('You already guessed that! Try again')
-		elif guess in secret_word:
-			print('Correct!')
+			print('You already guessed that! Try again\n')
 
-			# One way to fix the duplicate letter problem
+		elif guess in secret_word:
+			print('Correct!\n')
+
+			# One way to fix the duplicate letter problem:
 			# If the guess appears more than once in the word, we need to add it
-			# to our correct_guesses for each occurance
+			# to our correct_guesses for each occurance. Is there a better way?
 			occurances = secret_word.count(guess)
 			for i in range(occurances):
 				correct_guesses.append(guess)
@@ -60,9 +68,9 @@ def game():
 				break
 		else:
 			incorrect_guesses.append(guess)	
-			print('Incorrect!')
+			print('Incorrect!\n')
 			guesses_left = MAX_GUESSES - len(incorrect_guesses)
-			print(f'You have {guesses_left} guesses left!')
+			print(f'You have {guesses_left} guesses left!\n')
 
 
 	if len(incorrect_guesses) == MAX_GUESSES:
