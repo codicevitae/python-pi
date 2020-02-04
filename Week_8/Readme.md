@@ -12,8 +12,10 @@
 #### Goal:
 Write a Python program which accepts the radius of a circle from the user and compute the area. (area = π r<sup>2</sup>)
 
-_Sample Output :_  
+_Sample Input:_  
 r = 1.1  
+
+_Sample Output:_  
 Area = 3.8013271108436504
 
 #### Review:
