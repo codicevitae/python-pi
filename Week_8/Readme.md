@@ -52,7 +52,7 @@ If our range was 1 to 50, the output would be:
 
 
 ## Week 8 
-### Tuesday, Feb 6th
+### Thursday, Feb 6th
 
 ## Lesson: Understanding Code
 
